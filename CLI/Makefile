@@ -6,3 +6,6 @@ main: main.o
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -c -g main.cpp
+
+clean:
+	rm -f *.o *.exe
