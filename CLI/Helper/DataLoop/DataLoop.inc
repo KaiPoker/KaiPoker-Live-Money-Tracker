@@ -30,3 +30,8 @@ DataLoop<T>::DataLoop(const DataLoop<T> &rhs)
         ptrRhsCur = ptrRhsCur -> getNext();
     }
 }
+
+DataLoop<T> &DataLoop<T>::operator=(const DataLoop<T> &rhs)
+{
+
+}
