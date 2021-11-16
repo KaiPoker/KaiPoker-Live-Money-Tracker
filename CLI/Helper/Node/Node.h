@@ -9,18 +9,34 @@ class Node
         Node *ptrPrev; // Points to the previous node in the linked list
     public:
         // Constructors
-        Node() : ptrNext(nullptr), ptrPrev(nullptr){} // Create new node with everything initialized to default values
-        Node(T data) : data(data), ptrNext(nullptr), ptrPrev(nullptr){} // Create new node with a specified value for the data
+
+        // Default constructor that initalizes pointers to nullptr and data to the default value
+        Node() : ptrNext(nullptr), ptrPrev(nullptr){} 
+
+        // Alternate constructor that initalizes pointers to nullptr but sets data in this node to the value specified
+        Node(T data) : data(data), ptrNext(nullptr), ptrPrev(nullptr){} 
         
         // Getters
-        T getData() const {return data;} // Get the data in the node
-        Node<T> *getNext() const {return ptrNext;} // Get the pointer to the next node in the linked list
-        Node<T> *getPrev() const {return ptrPrev;} // Get the pointer to the previous node in the linked list
+
+        // Gets the data in the node
+        T getData() const {return data;} 
+
+        // Gets the pointer to the next node in the linked list
+        Node<T> *getNext() const {return ptrNext;} 
+
+        // Gets the pointer to the previous node in the linked list
+        Node<T> *getPrev() const {return ptrPrev;} 
 
         // Setters
-        void setData(T data){this -> data = data;} // Set the data in the node
-        void setNext(Node<T> *ptrNext){this -> ptrNext = ptrNext;} // Set the pointer to the next node
-        void setPrev(Node<T> *ptrPrev){this -> ptrPrev = ptrPrev;} // Set the pointer to the previous node
+
+        // Sets the data in this node
+        void setData(T data){this -> data = data;} 
+
+        // Sets the pointer to the next node
+        void setNext(Node<T> *ptrNext){this -> ptrNext = ptrNext;} 
+
+        // Sets the pointer to the previous node
+        void setPrev(Node<T> *ptrPrev){this -> ptrPrev = ptrPrev;} 
 };
 
 #endif
