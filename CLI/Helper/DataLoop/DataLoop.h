@@ -53,7 +53,7 @@ class DataLoop {
         // Overloaded output stream operator << to print DataLoop
         template<typename U>
         friend std::ostream &operator<<(std::ostream &os, const DataLoop<U> &dl);
-}
+};
 
 #include "DataLoop.inc"
 #endif

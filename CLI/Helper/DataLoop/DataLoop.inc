@@ -8,8 +8,8 @@ DataLoop<T>::DataLoop(const T &num)
 {
     // Create first node and have it point to itself
     ptrStart = new Node<T>(num);
-    ptrStart -> getNext() = ptrStart;
-    ptrStart -> getPrev() = ptrStart;
+    ptrStart -> setNext(ptrStart);
+    ptrStart -> setPrev(ptrStart);
 
     // Update count
     ++count;
@@ -23,10 +23,10 @@ DataLoop<T>::DataLoop(const DataLoop<T> &rhs)
     count = 0;
 
     // Use operator+= to copy node by node
-    Node *ptrRhsCur = rhs.ptrStart;
-    for(int i = 0; i < rhs.count; ++i)
+    Node<T> *ptrRhsCur = rhs.ptrStart;
+    for(size_t i = 0; i < rhs.count; ++i)
     {
-        (*this) += ptrRhsCur -> data;
-        cur = cur -> ptrNext;
+        (*this) += ptrRhsCur -> getData();
+        ptrRhsCur = ptrRhsCur -> getNext();
     }
 }
