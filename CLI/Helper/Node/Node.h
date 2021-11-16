@@ -14,13 +14,13 @@ class Node
         
         // Getters
         T getData() const {return data;} // Get the data in the node
-        Node *getNext() const {return ptrNext;} // Get the pointer to the next node in the linked list
-        Node *getPrev() const {return ptrPrev;} // Get the pointer to the previous node in the linked list
+        Node<T> *getNext() const {return ptrNext;} // Get the pointer to the next node in the linked list
+        Node<T> *getPrev() const {return ptrPrev;} // Get the pointer to the previous node in the linked list
 
         // Setters
         void setData(T data){this -> data = data;} // Set the data in the node
-        void setNext(Node *ptrNext){this -> ptrNext = ptrNext;} // Set the pointer to the next node
-        void setPrev(Node *ptrPrev){this -> ptrPrev = ptrPrev;} // Set the pointer to the previous node
+        void setNext(Node<T> *ptrNext){this -> ptrNext = ptrNext;} // Set the pointer to the next node
+        void setPrev(Node<T> *ptrPrev){this -> ptrPrev = ptrPrev;} // Set the pointer to the previous node
 };
 
 #endif
