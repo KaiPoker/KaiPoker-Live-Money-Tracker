@@ -6,5 +6,8 @@
 template<typename T>
 DataLoop<T>::DataLoop(const T &num)
 {
-    
+    ptrStart = new Node<T>(num);
+    ptrStart -> getNext() = ptrStart;
+    ptrStart -> getPrev() = ptrStart;
+    ++count;
 }
